@@ -12,4 +12,8 @@ export const ContainerStyled = styled.div`
   background: ${(props) => props?.background};
   color: ${(props) => props?.color};
   margin: ${(props) => props?.margin};
+  border-radius: ${(props) => props?.borderRadius};
+  padding: ${(props) => props?.padding};
+  font-family: "Poppins", sans-serif;
+  font-size: ${(props) => props?.fontSize};
 `;

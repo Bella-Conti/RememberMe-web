@@ -8,8 +8,7 @@ export const TextStyled = styled.p`
   margin-bottom: ${(props) => props?.marginBottom};
   font-weight: ${(props) => props?.fontWeight || "400"};
   font-family: "Poppins", sans-serif;
-  font-size: ${(props) =>
-    props?.type == "label"
+  font-size: ${(props) => props?.type == "label"
       ? "18px"
       : props?.type == "title"
       ? "72px"
