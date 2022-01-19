@@ -10,4 +10,6 @@ export const ContainerStyled = styled.div`
   justify-content: ${(props) => props?.justifyContent};
   float: ${(props) => props?.float};
   background: ${(props) => props?.background};
+  color: ${(props) => props?.color};
+  margin: ${(props) => props?.margin};
 `;
