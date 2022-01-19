@@ -4,7 +4,7 @@ import Schedule  from "./pages/Schedule";
 function App() {
   return (
     <>
-      {/* <Login /> */}
+      <Login />
       <Schedule />
     </>
   );
