@@ -1,5 +1,8 @@
-import { CardStyled } from "./card";
+import { CardStyled, CardTitle, CardFooter } from "./card";
 
-export default function Card({ ...props }) {
-  return <CardStyled {...props}></CardStyled>;
+export default function Card({ children, ...props }) {
+  return <CardStyled {...props}>{children}</CardStyled>;
 }
+
+Card.Title = CardTitle;
+Card.Footer = CardFooter;

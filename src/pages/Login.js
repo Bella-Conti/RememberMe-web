@@ -22,9 +22,7 @@ function Login() {
 
           <Container>
             <Text fontWeight="300" type="medio" marginLeft="60px" marginBottom="378px">
-              Publishing and graphic design, Lorem ipsum is a placeholder text
-              commonly used to demonstrate the visual form of a document or a
-              typeface
+            Welcome to remember me. Our goal is to help you remember your passwords, tasks and appointments!
             </Text>
           </Container>
         </Container>

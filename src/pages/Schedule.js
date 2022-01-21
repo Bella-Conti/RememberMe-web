@@ -1,6 +1,6 @@
-import DemoApp from "../demoCalendar";
+import Calendar from "../components/calendar/Calendar";
 import Container from "../components/container/Container";
-import Card from "../components/card/Card";
+import ScheduleCard from "../templates/schedule-card/ScheduleCard";
 import Text from "../components/text/Text";
 
 function Schedule() {
@@ -18,7 +18,7 @@ function Schedule() {
           Today events
         </Text>
 
-        <Container
+        {/* <Container
         height="75px"
         width="400px"
         background="#e9e8e8"
@@ -29,9 +29,12 @@ function Schedule() {
           <Text color="#212327" type="label" >
             Ir ao dentista
           </Text>
-        </Container>
+        </Container> */}
 
-        <Container
+      <ScheduleCard title="Ir ao dentista" />
+      <ScheduleCard title="Aniversário da Ana, levar presente" />
+
+        {/* <Container
         height="75px"
         width="400px"
         background="#e9e8e8"
@@ -42,7 +45,7 @@ function Schedule() {
           <Text color="#212327" type="label" >
             Aniversário da Ana, levar presente
           </Text>
-        </Container>
+        </Container> */}
         </Container>
         
         
@@ -53,8 +56,9 @@ function Schedule() {
           color="white"
           margin="40px"
           fontSize="15px"
+          background="red"
         >
-          <DemoApp />
+          <Calendar />
         </Container>
       </Container>
     </>
