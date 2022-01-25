@@ -5,9 +5,11 @@ export const CalendarStyled = styled.div`
   position: relative;
   left: 0;
   right: 0;
+  margin-right: 70px;
   z-index: 9999;
-  width: 100%;
+  width: 60%;
   border: 1px solid #eee; //cor da borda de fora do calendario
+  float: right;
 `;
 
 export const CalendarBodyStyled = styled.div`
@@ -23,33 +25,12 @@ export const CalendarBodyStyled = styled.div`
     z-index: -1;
     background: #05093c;
     height: 100%;
-    opacity: 0.5;
-    filter: blur(40px);
+    opacity: 0.8;
+    filter: blur(80px);
   }
 `;
 
-export const CalendarHeaderStyled = styled.div`
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 115%;
-  padding: 1.5em 0;
-  /* HEADER--------- */
-  display: block;
-  width: 100%;
-  padding: 1.75em 0;
-  border-bottom: 1px solid orange; // cor da linha de cima dos nomes dos dias
-  background: white; //fundo do mes e ano
-  /* ------------ */
-  /* ROW----------- */
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  /* ---------------- */
-  align-items: center;
-`;
+
 
 export const CalendarDayStyled = styled.div`
   text-transform: uppercase;
@@ -57,8 +38,8 @@ export const CalendarDayStyled = styled.div`
   color: #ccc;
   font-size: 70%;
   padding: 0.75em 0;
-  border-bottom: 1px solid orange; //cor da parte debaixo da linha q separa os dias da semana do calendario
-
+  border-bottom: 1px solid  #F1F1FE; //cor da parte debaixo da linha q separa os dias da semana do calendario
+  background: #F1F1FE;
   ${(props) =>
     css({
       ...calendarDayVariant[props.variant],
@@ -93,7 +74,7 @@ export const CalendarBodySelectedStyled = styled.div`
   border-image-slice: 1;
 `;
 export const CalendarBodyRowStyled = styled.div`
-  border-bottom: 1px solid white; //nao sei oq muda
+  border-bottom: 1px solid red; //nao sei oq muda
 `;
 
 export const CalendarBodyCellNumberStyled = styled.div`
@@ -154,8 +135,11 @@ export const CalendarColStyled = styled.div`
   flex-grow: 1;
   flex-basis: 0;
   max-width: 100%;
-  height: 80px;
+  height: 70px;
   display: flex;
+  color: #090023;
+  font-weight: 500;
+  font-size: 20px;
 
   ${(props) =>
     css({

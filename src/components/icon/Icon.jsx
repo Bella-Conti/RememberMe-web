@@ -1,3 +1,9 @@
-export default function Icon({ name }) {
-  return <span className="material-icons">{name}</span>;
+import { IconStyled } from "./icon";
+
+export default function Icon({ name, color, ...props }) {
+  return (
+    <IconStyled color={color} {...props}>
+      {name}
+    </IconStyled>
+  );
 }

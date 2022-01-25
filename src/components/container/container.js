@@ -16,4 +16,5 @@ export const ContainerStyled = styled.div`
   padding: ${(props) => props?.padding};
   font-family: "Poppins", sans-serif;
   font-size: ${(props) => props?.fontSize};
+  gap: ${(props) => props?.gap};
 `;

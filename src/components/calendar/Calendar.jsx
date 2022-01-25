@@ -13,6 +13,9 @@ import {
   CalendarRow,
 } from "./calendar";
 
+import Container from "../container/Container";
+import CalendarHeader from "./header/CalendarHeader";
+
 import Icon from "../icon/Icon";
 import Text from "../text/Text";
 
@@ -21,26 +24,6 @@ import * as dateFns from "date-fns";
 export default function Calendar() {
   const [currentMonth, setMonth] = useState(new Date());
   const [selectedDate, setDate] = useState(new Date());
-
-  const renderHeader = () => {
-    const dateFormat = "MMM yyyy";
-
-    return (
-      <CalendarHeaderStyled>
-        <CalendarColStyled variant="start">
-          <Icon name="chevron_left" />
-        </CalendarColStyled>
-        <CalendarColStyled variant="center">
-          <Text type="label" color="black">
-            {dateFns.format(currentMonth, dateFormat)}
-          </Text>
-        </CalendarColStyled>
-        <CalendarColStyled variant="end">
-          <Icon name="chevron_right"></Icon>
-        </CalendarColStyled>
-      </CalendarHeaderStyled>
-    );
-  };
 
   const renderDays = () => {
     const dateFormat = "EEE";
@@ -89,14 +72,16 @@ export default function Calendar() {
       rows.push(<CalendarRow key={day}>{days}</CalendarRow>);
       days = [];
     }
-    return <CalendarBodyStyled >{rows}</CalendarBodyStyled>;
+    return <CalendarBodyStyled>{rows}</CalendarBodyStyled>;
   };
 
   return (
+    <Container display="flex" flexDirection="column" padding="50px" gap="40px">
+      <CalendarHeader />
       <CalendarStyled>
-        {renderHeader()}
         {renderDays()}
         {renderCells()}
       </CalendarStyled>
+    </Container>
   );
 }
