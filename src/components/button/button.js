@@ -1,26 +1,70 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { fontSize } from "../../theme/global";
 
+const buttonVariant = {
+  default: {
+    background: "linear-gradient(135deg,#7F0E96 2%,#FF73B6 120%)",
+    color: "#e5e5e5",
+    border: "none",
+    cursor: "pointer",
+  },
+  ghost: {
+    background: "transparent",
+    border: "solid 1px #6868B5",
+    color: "#e5e5e5",
+    cursor: "pointer",
+  },
+  disabled: {
+    background: "#E8E8E8",
+    border: "none",
+    color: "#A8AAAF",
+    cursor: "not-allowed",
+  },
+};
+
+const buttonSize = {
+  sm: {
+    width: "9.938rem",
+    height: "2.875rem",
+    "font-size": fontSize.sm,
+  },
+  md: {
+    width: "18.438rem",
+    height: "3rem",
+    "font-size": fontSize.md,
+  },
+  lg: {
+    width: "23.438rem",
+    height: "3.125rem",
+    "font-size": fontSize.lg,
+  },
+};
+
+// <Button variant="ghost" size="md" />
 export const ButtonStyled = styled.button`
-  border: none;
-  width: 405px;
-  height: 50px;
-  margin-bottom: ${(props) => props?.marginBottom};
+  ${(props) =>
+    css({
+      ...buttonVariant[props?.variant || "default"],
+      ...buttonSize[props?.size || "md"],
+    })}
   border-radius: 5px;
-  background: linear-gradient(50.77deg, #7f0e96 8.84%, #ff73b6 85.43%);
-  color: #e5e5e5;
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
-  font-size: 18px;
   line-height: 27px;
-  display: ${(props) => (props.icon ? "flex" : "block")};
-  justify-content: ${(props) => (props.icon ? "space-between" : "unset")};
-  padding: 0 1.35rem;
+  display: flex;
+  justify-content: ${(props) => (props.icon ? "space-between" : "center")};
   align-items: center;
-  cursor: pointer;
+  padding: 0;
+  margin: 0;
+
+  ${(props) =>
+    css({
+      ...props?.theme[props.fontSize],
+    })}
 
   ::after {
-    font-family: "Material Icons" ${props=> console.log(props)};
-    content: ${(props) => `'${props?.icon.props.name}'`};
+    font-family: "Material Icons";
+    content: ${(props) => `'${props?.icon?.props.name || ""}'`};
   }
 `;

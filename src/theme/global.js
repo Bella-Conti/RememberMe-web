@@ -7,7 +7,7 @@ export const fontSize = {
     "font-size": "0.875rem",
     "line-height": "1.25rem",
   },
-  base: {
+  md: {
     "font-size": "1rem",
     "line-height": "1.5rem",
   },

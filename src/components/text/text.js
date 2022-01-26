@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export const TextStyled = styled.p`
   padding: ${(props) => props.padding};
   color: ${(props) => props.color || "#FFFFFF"};
-  margin: 0;
+  margin: ${(props) => props.margin || "0"};;
   margin-left: ${(props) => props?.marginLeft};
   margin-bottom: ${(props) => props?.marginBottom};
   font-weight: ${(props) => props?.fontWeight || "400"};

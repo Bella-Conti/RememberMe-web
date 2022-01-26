@@ -50,10 +50,10 @@ function Login() {
               <Text>Password</Text>
               <Input marginBottom="20px" />
               <Text marginBottom="80px">I forgot the password</Text>
-              <Button marginBottom="40px" icon={<Icon name="east" />}>
-                Sign In{" "}
+              <Button variant="default" marginBottom="40px" icon={<Icon name="east" />}>
+                Sign In
               </Button>
-              <Button icon={<Icon name="east" />}>Register </Button>
+              <Button variant="transparent" icon={<Icon name="east" />}>Register </Button>
             </Container>
           </Container>
         </BackgroundSide>

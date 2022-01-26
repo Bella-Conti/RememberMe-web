@@ -5,11 +5,14 @@ export default function ScheduleCard({ title }) {
   return (
     <Card>
       <Card.Title>{title}</Card.Title>
-      {/* <Card.Footer>
+      <Card.Footer>
         <Card.Actions>
-          <Icon />
+          <Icon name="access_alarm" />
+          <Icon name="label" type="outlined" />
+          <Icon name="delete" type="outlined" />
+          <Icon name="repeat" />
         </Card.Actions>
-      </Card.Footer> */}
+      </Card.Footer>
     </Card>
   );
 }

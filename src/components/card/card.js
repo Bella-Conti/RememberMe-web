@@ -1,21 +1,33 @@
 import styled from "styled-components";
 
 export const CardStyled = styled.div`
-  height: ${(props) => props?.margin};
-  width: ${(props) => props?.margin};
+  height: 150px;
+  width: 471px;
   margin: ${(props) => props?.margin};
   margin-left: ${(props) => props?.marginLeft};
   margin-bottom: ${(props) => props?.marginBottom};
-  background: ${(props) => props?.background};
-  display: ${(props) => props?.display};
+  background: rgba(59, 74, 182, 0.38);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  box-sizing: border-box;
 `;
 
 export const CardTitle = styled.p`
-  color: #212327;
-  font-size: 18px;
+  color: #e5e5e5;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
 `;
 
-export const CardFooter = styled.p`
-  color: #212327;
-  font-size: 18px;
+export const CardFooter = styled.div`
+  width: 100%;
+  display: flex;
+  margin-top: auto;
+`;
+
+export const CardActions = styled.div`
+  display: flex;
+  gap: 10px;
 `;
