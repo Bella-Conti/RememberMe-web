@@ -70,11 +70,11 @@ export const CalendarBodyCellStyled = styled.div`
 `;
 export const CalendarBodySelectedStyled = styled.div`
   border-left: 10px solid transparent;
-  border-image: linear-gradient(45deg, orange 0%, red 40%); //nao sei oq muda
+  border-image: linear-gradient(45deg, orange 0%, red 40%);
   border-image-slice: 1;
 `;
 export const CalendarBodyRowStyled = styled.div`
-  border-bottom: 1px solid red; //nao sei oq muda
+  border-bottom: 1px solid red; 
 `;
 
 export const CalendarBodyCellNumberStyled = styled.div`
@@ -93,7 +93,7 @@ export const CalendarBodyDisabledStyled = styled.div`
 export const CalendarBodyCellBgStyled = styled.div`
   font-weight: 700;
   line-height: 1;
-  color: pink; //nao sei oq muda
+  color: pink;
   opacity: 0;
   font-size: 8em;
   position: absolute;
