@@ -4,6 +4,11 @@ import ScheduleCard from "../templates/schedule-card/ScheduleCard";
 import Text from "../components/text/Text";
 
 function Schedule() {
+
+
+  
+
+
   return (
     <>
       <Container>

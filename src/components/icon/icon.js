@@ -5,6 +5,7 @@ export const IconStyled = styled.span.attrs((props) => ({
     props?.type === "outlined" ? "material-icons-outlined" : "material-icons",
 }))`
   color: white;
+  cursor: pointer;
   ${(props) =>
     css({
       color: props.color,
