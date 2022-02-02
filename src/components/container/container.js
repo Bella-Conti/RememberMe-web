@@ -20,4 +20,5 @@ export const ContainerStyled = styled.div`
   font-size: ${(props) => props?.fontSize};
   gap: ${(props) => props?.gap};
   column-gap: ${(props) => props?.columnGap};
+  position: ${(props) => props?.position};
 `;

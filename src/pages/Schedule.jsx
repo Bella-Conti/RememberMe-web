@@ -14,7 +14,7 @@ function Schedule() {
       <Container>
         <Text>Today events</Text>
         <ScheduleCard title="Write here what will happen that day..." />
-        <Calendar />
+         {/* <Calendar /> */}
       </Container>
     </>
   );

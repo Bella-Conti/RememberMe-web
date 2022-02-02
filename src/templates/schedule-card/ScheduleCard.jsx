@@ -10,32 +10,43 @@ export default function ScheduleCard({ title }) {
 
   return (
     <>
+
+<OutsideClickHandler
+              onOutsideClick={() => {
+                setVisible(false);
+              }}
+            >
       <Card>
         <Card.Title>{title}</Card.Title>
         <Card.Footer>
           <Card.Actions>
             <Icon name="access_alarm" />
 
-            <OutsideClickHandler
-              onOutsideClick={() => {
-                setVisible(false);
-              }}
-            >
               <Icon
                 name="label"
                 type="outlined"
                 onClick={() => setVisible(!visible)}
               >
-                {visible ? "CLose" : "Open"}
+                {visible ? "Close" : "Open"}
               </Icon>
-            </OutsideClickHandler>
             {visible && <TagSelector />}
 
             <Icon name="delete" type="outlined" />
-            <Icon name="repeat" />
+
+
+
+            <Icon name="repeat"
+            onClick={() => setVisible(!visible)}
+            >
+            {visible ? "Close" : "Open"}
+            </Icon>
+            {visible && <SelectDay />}
+
+
           </Card.Actions>
         </Card.Footer>
       </Card>
+      </OutsideClickHandler>
     </>
   );
 }

@@ -12,6 +12,7 @@ export const CardStyled = styled.div`
   flex-direction: column;
   padding: 1rem;
   box-sizing: border-box;
+  position: relative;
 `;
 
 export const CardTitle = styled.p`
