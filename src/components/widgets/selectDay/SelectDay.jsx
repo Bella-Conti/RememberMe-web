@@ -8,6 +8,10 @@ import { BoxGroup } from "./selectDay";
 export default function SelectDay() {
   return (
     <>
+    <Container
+    position="absolute"
+    marginTop="45px"
+    >
     <Text>Repeat On</Text>
       <Container
         background="#0A1045"
@@ -40,6 +44,7 @@ export default function SelectDay() {
             Cancel
           </Button>
         </ButtonGroup>
+      </Container>
       </Container>
     </>
   );

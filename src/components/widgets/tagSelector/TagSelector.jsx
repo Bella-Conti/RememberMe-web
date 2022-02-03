@@ -11,7 +11,7 @@ export default function TagSelector() {
         position="absolute"
         height="191px"
         width="258px"
-        marginTop="68px"
+        marginTop="45px"
       >
         <Text>Select a tag</Text>
         <Container

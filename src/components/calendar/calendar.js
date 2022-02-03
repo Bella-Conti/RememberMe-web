@@ -9,7 +9,6 @@ export const CalendarStyled = styled.div`
   z-index: 9999;
   width: 60%;
   border: 1px solid #eee; //cor da borda de fora do calendario
-  float: right;
 `;
 
 export const CalendarBodyStyled = styled.div`

@@ -12,7 +12,7 @@ function Schedule() {
   return (
     <>
       <Container>
-        <Text>Today events</Text>
+        <Text fontSize="x2l" >Today events</Text>
         <ScheduleCard title="Write here what will happen that day..." />
          {/* <Calendar /> */}
       </Container>

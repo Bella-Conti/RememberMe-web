@@ -8,6 +8,7 @@ export const TextStyled = styled.p`
   margin-bottom: ${(props) => props?.marginBottom};
   font-weight: ${(props) => props?.fontWeight || "400"};
   font-family: Poppins, sans-serif;
+  text-align: ${(props) => props?.textAlign};
   ${(props) =>
     css({
       ...props.theme[props.fontSize],

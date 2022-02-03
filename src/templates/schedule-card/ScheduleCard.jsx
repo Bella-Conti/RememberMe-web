@@ -7,13 +7,17 @@ import SelectDay from "../../components/widgets/selectDay/SelectDay";
 
 export default function ScheduleCard({ title }) {
   const [visible, setVisible] = useState(false);
-
+  const [visibleTag, setVisibleTag] = useState(false);
+  const [visibleDays, setVisibleDays] = useState(false);
+  
   return (
     <>
 
 <OutsideClickHandler
               onOutsideClick={() => {
+                setVisibleTag(false);
                 setVisible(false);
+
               }}
             >
       <Card>
@@ -25,22 +29,32 @@ export default function ScheduleCard({ title }) {
               <Icon
                 name="label"
                 type="outlined"
-                onClick={() => setVisible(!visible)}
+                onClick={() => {
+                  setVisibleTag(!visibleTag);
+                  setVisibleDays(false)
+                }}
               >
-                {visible ? "Close" : "Open"}
+                {visibleTag ? "Close" : "Open"}
               </Icon>
-            {visible && <TagSelector />}
+            {visibleTag && <TagSelector />}
+
+            
 
             <Icon name="delete" type="outlined" />
 
-
-
+           
+        
             <Icon name="repeat"
-            onClick={() => setVisible(!visible)}
+            onClick={() =>{
+              setVisibleDays(!visibleDays);
+              setVisibleTag(false)
+            }}
             >
-            {visible ? "Close" : "Open"}
+             
+            {visibleDays ? "Close" : "Open"}
+
             </Icon>
-            {visible && <SelectDay />}
+            {visibleDays && <SelectDay />}
 
 
           </Card.Actions>
