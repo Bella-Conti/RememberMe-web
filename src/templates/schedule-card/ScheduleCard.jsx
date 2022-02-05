@@ -26,7 +26,7 @@ export default function ScheduleCard({ title }) {
           <Card.Actions>
             <Icon name="access_alarm" />
 
-              <Icon
+              <Icon 
                 name="label"
                 type="outlined"
                 onClick={() => {

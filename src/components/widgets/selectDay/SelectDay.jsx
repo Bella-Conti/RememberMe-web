@@ -1,3 +1,4 @@
+import React, { useState } from "react"
 import Button from "../../button/Button";
 import Container from "../../container/Container";
 import Text from "../../text/Text";
@@ -6,9 +7,12 @@ import { ButtonGroup } from "./selectDay";
 import { BoxGroup } from "./selectDay";
 
 export default function SelectDay() {
+
+  const [selectedDay, setSelectedDay] = useState([]);
+
   return (
     <>
-    <Container
+    <Container  
     position="absolute"
     marginTop="45px"
     >
@@ -27,7 +31,13 @@ export default function SelectDay() {
         marginTop="0.188rem"
       >
         <BoxGroup>
-          <Box>SUN</Box>
+          {
+            selectedDay.map(day => (
+              {selectedDay && <p>(deu certo)</p>}
+              <Box onClick={()=>handleSelected}>SUN</Box>
+
+            ))
+          }
           <Box>MON</Box>
           <Box>TUE</Box>
           <Box>WED</Box>
