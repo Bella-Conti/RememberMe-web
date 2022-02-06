@@ -5,12 +5,24 @@ import Text from "../components/text/Text";
 import Icon from "../components/icon/Icon";
 import Container from "../components/container/Container";
 import api from "../service/";
+import { Navigate, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-function Login() {
+function Register() {
+  const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const nav = useNavigate();
 
+  function validationName(event) {
+    const nameInput = event.target.value;
+
+    if (nameInput.length > 3) {
+      setName(nameInput);
+      console.log("NAME", name);
+    }
+  }
+  
   function validationPassword(event) {
     const passwordInput = event.target.value;
 
@@ -28,40 +40,39 @@ function Login() {
     }
   }
 
-  /* 
-  
-   {
-  "createdAt": "2022-02-05T07:32:46.853Z",
-  "name": "Alison Miller",
-  "email": "isabella@gmail.com",
-  "password": "1234567890",
-  "id": "1"
- },
-  */
-
-  async function login() {
-    const loginData = {
+ async function RegisterUsers() {
+    const registerData = {
+      name: name,
       email: email,
       password: password,
     };
 
-    // option 1
-    //api.get(`/Users/${}`)
-    //  const response = api.get("/Users/1")
+    const response = await api.post("/Users", registerData)
+    if(response.data.email == email && response.data.password == password){
+      nav("/")
+    } 
 
-    //  api.get("/Users/1")
+  }
+
+ 
+
+  // api.post("/Users")
+  // .then((response)=>{
+  //   if(response.data.name == name && response.data.email == email && response.data.password == password){
+  //     alert("register RIGHT")
+  //   } else {
+  //     alert("go again")
+  //   }
+  // })
+
+  //  api.get("/Users/1")
     //   .then((response) =>{
     //     if(response.data.email == email && response.data.password == password){
     //       alert("email and senha right")
     //     }
     //   })
 
-    const response = await api.get("/Users/1");
-        if(response.data.email == email && response.data.password == password){
-          alert("async await email and senha right")
-        }
 
-  }
 
   return (
     <>
@@ -95,7 +106,7 @@ function Login() {
         <BackgroundSide>
           <Container flexDirection="column" alignItems="center" display="flex">
             <Text type="title" fontWeight="200">
-              Login
+              Register
             </Text>
 
             <Text marginBottom="80px" type="medio" fontWeight="700">
@@ -107,23 +118,24 @@ function Login() {
               height="500px"
               display="flex"
             >
+              <Text>Nome</Text>
+              <Input marginBottom="60px" onChange={validationName} />
+
               <Text>E-mail</Text>
               <Input marginBottom="60px" onChange={validationEmail} />
 
               <Text>Password</Text>
               <Input marginBottom="20px" onChange={validationPassword} />
-              <Text marginBottom="80px">I forgot the password</Text>
+
               <Button
                 variant="default"
                 marginBottom="40px"
                 icon={<Icon name="east" />}
-                onClick={login}
+                onClick={RegisterUsers}
               >
                 Sign In
               </Button>
-              <Button variant="transparent" icon={<Icon name="east" />}>
-                Register{" "}
-              </Button>
+           
             </Container>
           </Container>
         </BackgroundSide>
@@ -132,4 +144,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Register;

@@ -9,6 +9,7 @@ import { fontSize } from "./theme/global";
 import TagSelector from "./components/widgets/tagSelector/TagSelector";
 import SelectDay from "./components/widgets/selectDay/SelectDay";
 import ScheduleCard from "./templates/schedule-card/ScheduleCard";
+import Register from "./pages/Register";
 
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
             <Route exact path="/calendar" element={<Calendar />} />
             <Route exact path="/category" element={<TagSelector />} />
             <Route exact path="/days" element={<SelectDay />} />
+            <Route exact path="/register" element={<Register />} />
+
           </Routes>
         </SwitchRouter>
       </ThemeProvider>

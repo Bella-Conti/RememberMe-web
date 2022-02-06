@@ -31,13 +31,13 @@ export default function SelectDay() {
         marginTop="0.188rem"
       >
         <BoxGroup>
-          {
+          {/* {
             selectedDay.map(day => (
               {selectedDay && <p>(deu certo)</p>}
               <Box onClick={()=>handleSelected}>SUN</Box>
 
             ))
-          }
+          } */}
           <Box>MON</Box>
           <Box>TUE</Box>
           <Box>WED</Box>
