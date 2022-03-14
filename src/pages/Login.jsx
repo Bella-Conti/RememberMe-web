@@ -76,6 +76,7 @@ function Login() {
           <Text type="title" fontWeight="200">
             Welcome to
           </Text>
+          <img src="/assets/Add.svg" alt="" />
 
           <Container>
             <Text
