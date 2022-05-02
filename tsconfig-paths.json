@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "components/*": ["./src/components/*"],
+      "pages/*": ["./src/pages/*"],
+      "templates/*": ["./src/templates/*"],
+      "services/*": ["./src/services/*"]
+    }
+  },
+  "include": ["./src"]
+}
