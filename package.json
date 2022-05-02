@@ -22,6 +22,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "NODE_ENV=test jest",
+    "coverage": "yarn test && yarn codecov",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -49,6 +50,7 @@
     "@babel/preset-react": "^7.16.7",
     "babel-jest": "^28.0.3",
     "babel-loader": "^8.2.5",
+    "codecov": "^3.8.3",
     "jest": "^28.0.3",
     "react-test-renderer": "^18.1.0"
   }

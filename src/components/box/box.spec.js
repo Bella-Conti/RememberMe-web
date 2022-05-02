@@ -3,6 +3,6 @@ import Box from "./Box"
 
 describe("Button", () => {
   it("Should work as expected", () => {
-    expect(1 + 1).toBe(3)
+    expect(1 + 1).toBe(2)
   })
 })

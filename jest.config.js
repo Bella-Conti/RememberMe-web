@@ -1,6 +1,7 @@
 module.exports = {
   clearMocks: true,
   coverageDirectory: "coverage",
+  collectCoverage: true,
   testEnvironment: "node",
   transform: {
     "^.+\\.jsx?$": "babel-jest"
