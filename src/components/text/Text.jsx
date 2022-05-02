@@ -1,5 +1,5 @@
-import { TextStyled } from "./text";
+// import { TextStyled } from "./text-styled";
 
 export default function Text({ ...props }) {
-  return <TextStyled {...props} />;
+  return <h1>oi</h1>
 }

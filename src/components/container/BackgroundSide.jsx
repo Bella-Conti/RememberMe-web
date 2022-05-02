@@ -1,4 +1,4 @@
-import { BackgroundSideStyled } from "./backgroundSide";
+import { BackgroundSideStyled } from "./backgroundSide-styled";
 
 export default function BackgroundSide({children, ...props}) {
   return (

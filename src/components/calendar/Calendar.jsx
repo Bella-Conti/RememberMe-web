@@ -11,7 +11,7 @@ import {
   CalendarBodyCellNumberStyled,
   CalendarBodyStyled,
   CalendarRow,
-} from "./calendar";
+} from "./calendar-styled";
 
 import Container from "../container/Container";
 import CalendarHeader from "./header/CalendarHeader";

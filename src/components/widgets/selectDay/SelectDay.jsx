@@ -3,8 +3,8 @@ import Button from "../../button/Button";
 import Container from "../../container/Container";
 import Text from "../../text/Text";
 import Box from "../../box/Box";
-import { ButtonGroup } from "./selectDay";
-import { BoxGroup } from "./selectDay";
+import { ButtonGroup } from "./selectDay-styled";
+import { BoxGroup } from "./selectDay-styled";
 
 export default function SelectDay() {
 

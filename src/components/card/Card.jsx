@@ -1,4 +1,4 @@
-import { CardStyled, CardTitle, CardFooter, CardActions } from "./card";
+import { CardStyled, CardTitle, CardFooter, CardActions } from "./card-styled";
 
 export default function Card({ children, ...props }) {
   return <CardStyled {...props}>{children}</CardStyled>;
