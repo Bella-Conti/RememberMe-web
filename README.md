@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gh/Bella-Conti/RememberMe-web/branch/main/graph/badge.svg?token=J04UHS23KW)](https://codecov.io/gh/Bella-Conti/RememberMe-web)
+
 # Remember&#46;Me
 
 
