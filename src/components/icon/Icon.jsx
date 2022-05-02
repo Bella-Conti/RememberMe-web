@@ -1,4 +1,4 @@
-import { IconStyled } from "./icon";
+import { IconStyled } from "./icon-styled";
 
 export default function Icon({ name, color, ...props }) {
   console.log("PROPS:", props);

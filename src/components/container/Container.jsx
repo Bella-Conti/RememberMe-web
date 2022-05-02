@@ -1,4 +1,4 @@
-import { ContainerStyled } from "./container";
+import { ContainerStyled } from "./container-styled";
 
 export default function Container({children, ...props}) {
   return (

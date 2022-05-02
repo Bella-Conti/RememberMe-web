@@ -2,7 +2,7 @@ import Tag from "../../tag/Tag";
 import Text from "../../text/Text";
 import Container from "../../container/Container";
 import Icon from "../../icon/Icon";
-import { Flex } from "../../flex/flex";
+import { Flex } from "../../flex/flex-styled";
 
 export default function TagSelector() {
   return (

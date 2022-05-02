@@ -1,6 +1,6 @@
 import Calendar from "../components/calendar/Calendar";
-import Container from "../components/container/Container";
 import ScheduleCard from "../templates/schedule-card/ScheduleCard";
+import Container from "../components/container/Container";
 import Text from "../components/text/Text";
 
 function Schedule() {
