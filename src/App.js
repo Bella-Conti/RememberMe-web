@@ -10,12 +10,14 @@ import TagSelector from "./components/widgets/tagSelector/TagSelector";
 import SelectDay from "./components/widgets/selectDay/SelectDay";
 import ScheduleCard from "./templates/schedule-card/ScheduleCard";
 import Register from "./pages/Register";
+import { Counter } from "./features/counter/counter";
 
 
 function App() {
   return (
     <>
-      <GlobalStyled />
+    <Counter />
+      {/* <GlobalStyled />
       <ThemeProvider theme={fontSize}>
         <SwitchRouter>
           <Routes>
@@ -28,7 +30,7 @@ function App() {
 
           </Routes>
         </SwitchRouter>
-      </ThemeProvider>
+      </ThemeProvider> */}
     </>
   );
 }
